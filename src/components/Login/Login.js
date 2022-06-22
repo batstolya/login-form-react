@@ -13,7 +13,8 @@ const emailReducer = (state, action) => {
   if (action.type === "INPUT_BLUR") {
     return { value: state.value, isValid: state.value.includes("@") };
   }
-
+  console.log("Hello")
+  console.log('Bats Anatolii ')
   return { value: "", isValid: false };
 };
 
@@ -22,7 +23,7 @@ const passwordReducer = (state, action) => {
     return { value: action.val, isValid: state.value.trim().length > 6  };
   }
   if (action.type === "PASSWORD_BLUR") {
-    return { value: state.value, isValid: state.value.trim().length > 6 };
+    return { value: state.value, isValid:  state.value.trim().length > 6 };
   }
 
   return {
